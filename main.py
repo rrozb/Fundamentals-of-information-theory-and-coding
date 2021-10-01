@@ -7,6 +7,6 @@ calculated_entropy = entropy(probabilities)
 calculated_relative_entropy = relative_entropy(probabilities)
 #Redundancy
 redundancy = 1 - calculated_relative_entropy
-print(calculated_entropy)
-print(calculated_relative_entropy)
-print(redundancy)
+# print(calculated_entropy)
+# print(calculated_relative_entropy)
+# print(redundancy)
