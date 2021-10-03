@@ -12,3 +12,11 @@ def relative_entropy(probabilities):
     """
     
     return entropy(probabilities)/math.log(len(probabilities), 2)
+
+def average(probabilities, codes):
+    """
+    Calculates average from given probabilities.
+    """
+    keylist = list(codes.keys())
+    keylist.sort()
+    return sum([probabilities[keylist[i]]*len(codes[keylist[i]]) for i in range(len(keylist))])
