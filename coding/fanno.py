@@ -44,10 +44,3 @@ class FannoAlgo(BaseAlgo):
             sliced_dict2 = {k: current_dict[k] for k in list(current_dict.keys())[min_i+1:]}
             self.__update_code(sliced_dict1, sliced_dict2)
             self.__update_stack(sliced_dict1, sliced_dict2)
-
-    @property
-    def final_codes(self):
-        '''
-        Return final codes, their length and given probabilities. 
-        '''
-        return {k: (self.codes[k], len(self.codes[k]), self.probabilities_dict[k]) for k in self.codes}

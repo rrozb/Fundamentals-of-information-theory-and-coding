@@ -13,10 +13,8 @@ def relative_entropy(probabilities):
     
     return entropy(probabilities)/math.log(len(probabilities), 2)
 
-def average(probabilities, codes):
+def average_len(probabilities_dict):
     """
-    Calculates average from given probabilities.
+    Calculates average from given dict, its values are tuples such as (code, length of code, probability).
     """
-    keylist = list(codes.keys())
-    keylist.sort()
-    return sum([probabilities[keylist[i]]*len(codes[keylist[i]]) for i in range(len(keylist))])
+    return sum([code_len*proba for _, code_len,proba in probabilities_dict.values()])
